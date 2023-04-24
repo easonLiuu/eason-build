@@ -1,0 +1,12 @@
+{
+  "name": "samples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eason-build start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

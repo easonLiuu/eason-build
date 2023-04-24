@@ -1,0 +1,6 @@
+{
+    "entry": "src/index.js",
+    "plugins": [
+        "eason-build-test"
+    ]
+}
