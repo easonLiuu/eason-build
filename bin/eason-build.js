@@ -28,6 +28,6 @@ const MIN_NODE_VERSION = '8.9.0';
             .action(buildServer)
         program.parse(process.argv)
     } catch (error) {
-        console.log(e.message)
+        console.log(error.message)
     }
 })()
