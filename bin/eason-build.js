@@ -18,11 +18,13 @@ const MIN_NODE_VERSION = '8.9.0';
 
         program
             .command('start')
+            .option('-c, --config  <config>', '配置文件路径')
             .description('start server by eason-build ')
             .allowUnknownOption()
             .action(startServer)
         program
             .command('build')
+            .option('-c, --config  <config>', '配置文件路径')
             .description('build project by eason-build')
             .allowUnknownOption()
             .action(buildServer)
