@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "eason-build start --config eason-build.json"
+    "dev": "eason-build start --debug"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+checkDebug()
 const commander = require('commander')
 const { program } = require('commander')
 const pkg = require('../package.json')
@@ -7,6 +8,14 @@ const startServer = require('../lib/start/startServer')
 const buildServer = require('../lib/build/buildServer')
 
 const MIN_NODE_VERSION = '8.9.0';
+
+function checkDebug() {
+    if (process.argv.indexOf('--debug') >= 0 || process.argv.indexOf('-d') >= 0) {
+        process.env.LOG_LEVEL = 'verbose'
+    } else {
+        process.env.LOG_LEVEL = 'info'
+    }
+}
 
 (async () => {
     try {
@@ -28,6 +37,10 @@ const MIN_NODE_VERSION = '8.9.0';
             .description('build project by eason-build')
             .allowUnknownOption()
             .action(buildServer)
+
+        program
+            .option('-d, --debug', '开启调试模式')
+
         program.parse(process.argv)
     } catch (error) {
         console.log(error.message)
