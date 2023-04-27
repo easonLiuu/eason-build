@@ -1,0 +1,10 @@
+{
+    "entry": "src/index.js",
+    "plugins": ["eason-config"],
+    "hooks": [
+      ["start",
+       "eason-build-start-hook"
+      ]
+    ]
+  }
+  
