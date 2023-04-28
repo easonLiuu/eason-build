@@ -1,0 +1,31 @@
+{
+  "entry": "src/index.js",
+  "plugins": [
+    "eason-build-test",
+    [
+      "eason-build-test",
+      {
+        "a": 1,
+        "b": 2
+      }
+    ],
+    [
+      "./plugins/eason-build-plugin.js",
+      {
+        "a": 1,
+        "b": 2,
+        "c": 3
+      }
+    ]
+  ],
+  "hooks": [
+    [
+      "start",
+      "./hooks/eason-build-start-hook.js"
+    ],
+    [
+      "start",
+      "./hooks/eason-build-start-hook.mjs"
+    ]
+  ]
+}
