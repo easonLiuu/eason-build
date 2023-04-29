@@ -2,7 +2,7 @@ export default {
   entry: "src/index.js",
   plugins: function() {
     return [
-      ['eason-build-test', {a: 1, b: 2}],
+      ['./plugins/eason-build-plugin', {a: 1, b: 2}],
       function(api, options) {
         const config = api.getWebpackConfig()
         config.module
@@ -15,7 +15,7 @@ export default {
               .loader('eslint-loader')
         console.log('this is anonymous plugin')
         const value = api.getValue('name')
-        console.log(value.fn())
+        console.log(value)
       }
     ]
   },
@@ -23,18 +23,18 @@ export default {
     [
       "start",
       (context) => {
-        console.log("start", context);
+        // console.log("start", context);
       },
     ],
     [
       "configResolved",
       (context) => {
-        console.log("configResolved", context);
+        // console.log("configResolved", context);
       },
     ],
     [
       'plugin', (context) => {
-        console.log('plugin', context.webpackConfig)
+        // console.log('plugin', context.webpackConfig)
       }
     ]
   ],

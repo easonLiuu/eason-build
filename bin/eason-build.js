@@ -28,12 +28,14 @@ function checkDebug() {
         program
             .command('start')
             .option('-c, --config  <config>', '配置文件路径')
+            .option('--custom-webpack-path <customWebpackPath>', '自定义webpack路径')
             .description('start server by eason-build ')
             .allowUnknownOption()
             .action(startServer)
         program
             .command('build')
             .option('-c, --config  <config>', '配置文件路径')
+            .option('--custom-webpack-path <customWebpackPath>', '自定义webpack路径')
             .description('build project by eason-build')
             .allowUnknownOption()
             .action(buildServer)
