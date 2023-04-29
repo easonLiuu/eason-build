@@ -14,6 +14,8 @@ export default {
             .use('eslint')
               .loader('eslint-loader')
         console.log('this is anonymous plugin')
+        const value = api.getValue('name')
+        console.log(value.fn())
       }
     ]
   },
@@ -30,5 +32,10 @@ export default {
         console.log("configResolved", context);
       },
     ],
+    [
+      'plugin', (context) => {
+        console.log('plugin', context.webpackConfig)
+      }
+    ]
   ],
 };
