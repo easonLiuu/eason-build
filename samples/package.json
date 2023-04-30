@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "eason-build start --debug"
+    "dev": "eason-build start --debug",
+    "build": "cross-env EASON_BUILD_MODE=production eason-build build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^5.81.0"
+    "cross-env": "^7.0.3"
   }
 }
