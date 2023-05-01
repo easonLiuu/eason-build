@@ -4,18 +4,7 @@ export default {
     return [
       ['./plugins/eason-build-plugin', {a: 1, b: 2}],
       function(api, options) {
-        const config = api.getWebpackConfig()
-        config.module
-          .rule('eslint')
-            .test(/.js$/)
-            .exclude
-              .add('node_modules')
-              .end()
-            .use('eslint')
-              .loader('eslint-loader')
-        console.log('this is anonymous plugin')
-        const value = api.getValue('name')
-        console.log(value)
+        console.log('this is anonymous plugin', options)
       }
     ]
   },
