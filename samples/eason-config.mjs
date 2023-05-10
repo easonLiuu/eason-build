@@ -9,22 +9,22 @@ export default {
     ]
   },
   hooks: [
-    [
-      "start",
-      (context) => {
-        // console.log("start", context);
-      },
-    ],
-    [
-      "configResolved",
-      (context) => {
-        // console.log("configResolved", context);
-      },
-    ],
-    [
-      'plugin', (context) => {
-        // console.log('plugin', context.webpackConfig)
-      }
-    ]
+    // [
+    //   "start",
+    //   (context) => {
+    //     // console.log("start", context);
+    //   },
+    // ],
+    // [
+    //   "configResolved",
+    //   (context) => {
+    //     // console.log("configResolved", context);
+    //   },
+    // ],
+    // [
+    //   'plugin', (context) => {
+    //     // console.log('plugin', context.webpackConfig)
+    //   }
+    // ]
   ],
 };

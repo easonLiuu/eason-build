@@ -66,28 +66,28 @@ module.exports = function (api, options) {
             filename: 'css/[name].css',
             chunkFilename: 'css/[name].chunk.css'
         }]) 
-  config.plugin('HtmlWebpackPlugin')
-        .use(HtmlWebpackPlugin, [{
-            filename: 'login.html',
-            template: path.resolve(dir, './src/login.html'),
-            chunks: ['login']
-        }, {
-            filename: 'index.html',
-            template: path.resolve(dir, './src/index.html'),
-            chunks: ['index']
-        }])
-  config.plugin('ProvidePlugin')
-        .use(webpack.ProvidePlugin, [{
-            $: 'jquery',
-            jQuery: 'jquery'
-        }])
-  config.plugin('CopyWebpackPlugin')
-        .use(CopyWebpackPlugin, [{
-            patterns: [{
-                from: path.resolve(dir, './src/img'),
-                to: path.resolve(dir, './dist/img')
-            }]
-        }])
+//   config.plugin('HtmlWebpackPlugin')
+//         .use(HtmlWebpackPlugin, [{
+//             filename: 'login.html',
+//             template: path.resolve(dir, './src/login.html'),
+//             chunks: ['login']
+//         }, {
+//             filename: 'index.html',
+//             template: path.resolve(dir, './src/index.html'),
+//             chunks: ['index']
+//         }])
+//   config.plugin('ProvidePlugin')
+//         .use(webpack.ProvidePlugin, [{
+//             $: 'jquery',
+//             jQuery: 'jquery'
+//         }])
+//   config.plugin('CopyWebpackPlugin')
+//         .use(CopyWebpackPlugin, [{
+//             patterns: [{
+//                 from: path.resolve(dir, './src/img'),
+//                 to: path.resolve(dir, './dist/img')
+//             }]
+//         }])
   config.plugin('CleanWebpackPlugin')
         .use(CleanWebpackPlugin, [])
   config.optimization
