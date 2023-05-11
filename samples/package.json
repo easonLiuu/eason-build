@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "eason-build start --debug",
+    "dev": "eason-build start",
     "build": "cross-env EASON_BUILD_MODE=production eason-build build"
   },
   "keywords": [],
