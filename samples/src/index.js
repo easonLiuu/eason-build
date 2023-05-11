@@ -1,1 +1,3 @@
-console.log('hello eason')
+import utils from './utils'
+console.log('hello eason!!')
+utils()

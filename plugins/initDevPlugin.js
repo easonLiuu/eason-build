@@ -1,15 +1,13 @@
 const path = require("path");
-const webpack = require("webpack")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const CopyWebpackPlugin = require("copy-webpack-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 module.exports = function (api, options) {
   const { getWebpackConfig } = api;
   const config = getWebpackConfig();
   const dir = process.cwd();
   // 获取构建模式
-  const mode = process.env.EASON_BUILD_MODE || "development";
+  const mode = "development";
   config.mode(mode);
   console.log(mode);
   // 设置entry
@@ -97,24 +95,6 @@ module.exports = function (api, options) {
   config.plugin('CleanWebpackPlugin')
         .use(CleanWebpackPlugin, [])
   config.optimization
-        .minimize(true)
         .usedExports(true)
-        .splitChunks({
-            minSize: 30 * 1024,
-            chunks: 'all',
-            name: 'common',
-            //对某一个包独立打包
-            cacheGroups: {
-                jquery: {
-                    name: 'jquery',
-                    test: /jquery\.js/,
-                    chunks: 'all'
-                },
-                'lodash-es': {
-                    name: 'lodash-es',
-                    test: /lodash-es/,
-                    chunks: 'all'
-                }
-            }
-        })
+  config.watch(true)
 };
