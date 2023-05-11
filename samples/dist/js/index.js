@@ -1,2 +1,0 @@
-/*! For license information please see index.js.LICENSE.txt */
-(()=>{var __webpack_modules__={"./src/index.js":()=>{eval("console.log('hello eason')\n\n//# sourceURL=webpack://samples/./src/index.js?")}},__webpack_exports__={};__webpack_modules__["./src/index.js"]()})();
