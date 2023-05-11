@@ -66,6 +66,12 @@ module.exports = function (api, options) {
             filename: 'css/[name].css',
             chunkFilename: 'css/[name].chunk.css'
         }]) 
+  config.plugin('HtmlWebpackPlugin')
+        .use(HtmlWebpackPlugin, [{
+            filename: 'index.html',
+            template: path.resolve(dir, './public/index.html'),
+            chunks: ['index']
+        }])
 //   config.plugin('HtmlWebpackPlugin')
 //         .use(HtmlWebpackPlugin, [{
 //             filename: 'login.html',
